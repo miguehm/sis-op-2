@@ -1,5 +1,7 @@
 # Gestión de memoria
 
+# Ideas Previas
+
 ## Multiprocesamiento
 
 El multiprocesamiento es un concepto en informática que se refiere a la capacidad de una computadora para **ejecutar varios procesos en paralelo**, a través del uso de más de un procesador a nivel físico.
@@ -8,7 +10,7 @@ El sistema operativo se encarga de gestionar la asignación de las diferentes ta
 
 ## Multiusuario
 
-El término multiusuario se refiere a la característica de ciertos sistemas operativos o programas que permiten proveer servicio y procesamiento a múltiples usuarios simultáneamente. Esto significa que varios usuarios pueden utilizar el mismo equipo al mismo tiempo, gracias a la capacidad de los sistemas operativos para separar los recursos del sistema.
+El término multiusuario se refiere a la característica de ciertos sistemas operativos o programas que permiten **proveer servicio y procesamiento a múltiples usuarios** simultáneamente. Esto significa que varios usuarios pueden utilizar el mismo equipo al mismo tiempo, gracias a la capacidad de los sistemas operativos para separar los recursos del sistema.
 
 ## Multiprogramación
 
