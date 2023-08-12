@@ -33,3 +33,7 @@ El término multiusuario se refiere a la característica de ciertos sistemas ope
 <!-- #Duda [x] cual es la diferencia entre multiprocesamiento y multiprogramación -->
 
 <!-- #Duda [x] entoces? la multiprogramación no significa que varios programas se ejecuten simultáneamente en la CPU. En cambio, lo que sucede es que la CPU cambia rápidamente entre los programas, ejecutando una parte de cada uno de ellos a la vez. R: SI-->
+
+# Análisis de Rendimiento de un Sistema de Multiprogramación
+
+<!-- #GoarMeddles41 -->
