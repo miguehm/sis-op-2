@@ -169,16 +169,27 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="gestión-de-memoria"><a class="header" href="#gestión-de-memoria">Gestión de memoria</a></h1>
+<!-- toc -->
 <h1 id="ideas-previas"><a class="header" href="#ideas-previas">Ideas Previas</a></h1>
+<h2 id="multiprogramación"><a class="header" href="#multiprogramación">Multiprogramación</a></h2>
+<p>Ejecución <strong>concurrente</strong> de múltiples procesos en una sola CPU</p>
+<blockquote>
+<p><strong>Ejecución Concurrente</strong></p>
+<p>Se refiere a la propiedad de un sistema que permite que múltiples procesos se ejecuten a la vez. No significa que los procesos se estén ejecutando exactamente al mismo tiempo. En un solo procesador, la concurrencia se logra cuando el procesador cambia de un proceso a otro tan rápido que parece que todos los procesos se están ejecutando simultáneamente.</p>
+</blockquote>
+<p>Es <strong>la capacidad de un sistema operativo para tener varios programas o procesos en la memoria al mismo tiempo y permitir que la CPU cambie entre ellos</strong>. En un sistema de multiprogramación, cuando un proceso se bloquea o espera la entrada/salida, la CPU puede cambiar a otro proceso que esté listo para ejecutarse, lo que aumenta la utilización de la CPU.</p>
 <h2 id="multiprocesamiento"><a class="header" href="#multiprocesamiento">Multiprocesamiento</a></h2>
-<p>El multiprocesamiento es un concepto en informática que se refiere a la capacidad de una computadora para <strong>ejecutar varios procesos en paralelo</strong>, a través del uso de más de un procesador a nivel físico.</p>
+<p>Ejecución <strong>simultánea</strong> de procesos en múltiples CPUs.</p>
+<blockquote>
+<p><strong>Ejecución Simultanea</strong></p>
+<p>Se refiere a la ejecución de múltiples procesos <strong>exactamente</strong> al mismo tiempo. Esto se logra a través de un sistema con múltiples procesadores o núcleos, donde cada proceso puede ser asignado a un procesador o núcleo diferente.</p>
+</blockquote>
+<p>El multiprocesamiento se refiere a la capacidad de una computadora de <strong>aprovechar la potencia de múltiples unidades de procesamiento para diferentes partes de un programa al mismo tiempo</strong>.</p>
 <p>El sistema operativo se encarga de gestionar la asignación de las diferentes tareas a ser realizadas por los diversos procesadores en el sistema.</p>
 <h2 id="multiusuario"><a class="header" href="#multiusuario">Multiusuario</a></h2>
 <p>El término multiusuario se refiere a la característica de ciertos sistemas operativos o programas que permiten <strong>proveer servicio y procesamiento a múltiples usuarios</strong> simultáneamente. Esto significa que varios usuarios pueden utilizar el mismo equipo al mismo tiempo, gracias a la capacidad de los sistemas operativos para separar los recursos del sistema.</p>
-<h2 id="multiprogramación"><a class="header" href="#multiprogramación">Multiprogramación</a></h2>
-<p>La multiprogramación es un concepto en informática que hace referencia a la capacidad de un sistema para ejecutar <strong>múltiples programas o procesos al mismo tiempo</strong>. En un sistema de multiprogramación, varios programas se almacenan en la memoria principal del sistema y se comparte la CPU entre ellos</p>
-<!-- #Duda cual es la diferencia entre multiprocesamiento y multiprogramación -->
-<!-- #Duda entoces? la multiprogramación no significa que varios programas se ejecuten simultáneamente en la CPU. En cambio, lo que sucede es que la CPU cambia rápidamente entre los programas, ejecutando una parte de cada uno de ellos a la vez. -->
+<!-- #Duda [x] cual es la diferencia entre multiprocesamiento y multiprogramación -->
+<!-- #Duda [x] entoces? la multiprogramación no significa que varios programas se ejecuten simultáneamente en la CPU. En cambio, lo que sucede es que la CPU cambia rápidamente entre los programas, ejecutando una parte de cada uno de ellos a la vez. R: SI-->
 
                     </main>
 

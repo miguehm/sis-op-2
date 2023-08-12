@@ -1,5 +1,7 @@
 # Gestión de memoria
 
+<!-- toc -->
+
 # Ideas Previas
 
 ## Multiprogramación
