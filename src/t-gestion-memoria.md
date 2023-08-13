@@ -1,6 +1,6 @@
 # Gestión de Memoria
 
-Realizar la tabla de procesos y el diagrama de tiempos de los 4 procesos con $90%$ de I/O.
+Realizar la tabla de procesos y el diagrama de tiempos de los 4 procesos con 90% de I/O.
 
 | Job    | Tiempo de llegada    | Minutos necesarios CPU |
 |------- | -------------------- | ---------------------- |
@@ -9,6 +9,16 @@ Realizar la tabla de procesos y el diagrama de tiempos de los 4 procesos con $90
 | 3      | 10:15 min            | 2                      |
 | 4      | 10:20 min            | 2                      |
 
+
+## Tabla de Procesos
+
+|             | 1      | 2      | 3    | 4     |
+| ----------- | ------ | ------ | ---- | ----- |
+| CPU idle    | .90    | .81    | .729 | .6561 |
+| CPU busy    | .1     | .19    | .271 | .3439 |
+| CPU/Process | .1     | .095   | 0.09 | 0.085 |
+
+## Diagrama de Tiempos
 
 ![Diagrama de Tiempos](./images/SihunnRelys64.png) 
 
