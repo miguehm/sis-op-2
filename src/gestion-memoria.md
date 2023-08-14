@@ -30,9 +30,9 @@ El sistema operativo se encarga de gestionar la asignación de las diferentes ta
 
 El término multiusuario se refiere a la característica de ciertos sistemas operativos o programas que permiten **proveer servicio y procesamiento a múltiples usuarios** simultáneamente. Esto significa que varios usuarios pueden utilizar el mismo equipo al mismo tiempo, gracias a la capacidad de los sistemas operativos para separar los recursos del sistema.
 
-<!-- #Duda [x] cual es la diferencia entre multiprocesamiento y multiprogramación -->
+<!-- #Solucion cual es la diferencia entre multiprocesamiento y multiprogramación -->
 
-<!-- #Duda [x] entoces? la multiprogramación no significa que varios programas se ejecuten simultáneamente en la CPU. En cambio, lo que sucede es que la CPU cambia rápidamente entre los programas, ejecutando una parte de cada uno de ellos a la vez. R: SI-->
+<!-- #Solucion entoces? la multiprogramación no significa que varios programas se ejecuten simultáneamente en la CPU. En cambio, lo que sucede es que la CPU cambia rápidamente entre los programas, ejecutando una parte de cada uno de ellos a la vez. R: SI-->
 
 # Análisis de Rendimiento de un Sistema de Multiprogramación
 
