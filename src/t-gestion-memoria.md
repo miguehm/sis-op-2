@@ -1,4 +1,4 @@
-# Gestión de Memoria
+# T: Gestión de Memoria
 
 Realizar la tabla de procesos y el diagrama de tiempos de los 4 procesos con 90% de I/O.
 
@@ -19,6 +19,8 @@ Realizar la tabla de procesos y el diagrama de tiempos de los 4 procesos con 90%
 | CPU/Process | .1     | .095   | 0.09 | 0.085 |
 
 ## Diagrama de Tiempos
+
+<!-- #pendiente corregir primer paso a 1 min en lugar de 0.1 min -->
 
 ![Diagrama de Tiempos](./images/SihunnRelys64.png) 
 
