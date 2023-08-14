@@ -20,7 +20,7 @@ Realizar la tabla de procesos y el diagrama de tiempos de los 4 procesos con 90%
 
 ## Diagrama de Tiempos
 
-<!-- #pendiente corregir primer paso a 1 min en lugar de 0.1 min -->
+<!-- #fin corregir primer paso a 1 min en lugar de 0.1 min -->
 
 ![Diagrama de Tiempos](./images/SihunnRelys64.png) 
 
@@ -29,8 +29,8 @@ Realizar la tabla de procesos y el diagrama de tiempos de los 4 procesos con 90%
     - El tiempo empleado para terminar todas las tareas fue mucho mayor
 
 - ¿Cual es el máximo de procesos que están al mismo tiempo y en que tiempo sucede?
-    - Hay máximo 4 procesos al mismo tiempo durante 1.548 minutos
+    - Hay máximo 4 procesos al mismo tiempo en el lapso de 10:20 a 10:38, durante 18 minutos.
 
 - ¿Cuál es el tiempo total que se realizan los 4 procesos?
-    - 52.768 minutos
+    - 43.768 minutos
 
