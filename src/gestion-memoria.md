@@ -37,3 +37,9 @@ El término multiusuario se refiere a la característica de ciertos sistemas ope
 # Análisis de Rendimiento de un Sistema de Multiprogramación
 
 <!-- #GoarMeddles41 -->
+
+# Términos de Administración de Memoria
+
+<!-- #pendiente pag 7 pdf gestion de memoria -->
+
+<!-- #LaymanHeads29 -->
