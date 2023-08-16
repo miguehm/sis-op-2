@@ -43,3 +43,7 @@ El término multiusuario se refiere a la característica de ciertos sistemas ope
 <!-- #pendiente pag 7 pdf gestion de memoria -->
 
 <!-- #LaymanHeads29 -->
+
+# Requisitos para la Gestión de memoria
+
+
