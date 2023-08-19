@@ -58,7 +58,7 @@ Es un bloque de **memoria real** de igual tamaño al de una pagina (page).
 
 Traduce la dirección lógica de una memoria virtual a una dirección real en memoria real, permitiendo que cada programa tenga su propio espacio en memoria independiente a la memoria real.
 
-![](./images/LemalRelax32.png) 
+![](./images/HuntleyOpened124.png) 
 
 > La MMU utiliza una estructura de datos llamada **tabla de páginas** donde se almacena la correspondencia entre la ubicación de un marco con una página.
 
