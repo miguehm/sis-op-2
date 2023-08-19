@@ -188,10 +188,25 @@
 <li><a href="gestion-memoria.html#multiprogramaci%C3%B3n">Multiprogramación</a></li>
 <li><a href="gestion-memoria.html#multiprocesamiento">Multiprocesamiento</a></li>
 <li><a href="gestion-memoria.html#multiusuario">Multiusuario</a></li>
+<li><a href="gestion-memoria.html#memoria-virtual">Memoria Virtual</a></li>
+<li><a href="gestion-memoria.html#memoria-real">Memoria Real</a></li>
+<li><a href="gestion-memoria.html#page-p%C3%A1gina">Page (Página)</a></li>
+<li><a href="gestion-memoria.html#frame-marco">Frame (Marco)</a></li>
 </ul>
 </li>
-<li><a href="gestion-memoria.html#an%C3%A1lisis-de-rendimiento-de-un-sistema-de-multiprogramaci%C3%B3n">Análisis de Rendimiento de un Sistema de Multiprogramación</a></li>
-<li><a href="gestion-memoria.html#t%C3%A9rminos-de-administraci%C3%B3n-de-memoria">Términos de Administración de Memoria</a></li>
+<li><a href="gestion-memoria.html#mmu">MMU</a></li>
+<li><a href="gestion-memoria.html#requisitos-para-gestionar-la-memoria">Requisitos para Gestionar la Memoria</a></li>
+<li><a href="gestion-memoria.html#intercambio-de-p%C3%A1ginas-reubicaci%C3%B3n">Intercambio de Páginas (Reubicación)</a>
+<ul>
+<li><a href="gestion-memoria.html#fragmentaci%C3%B3n-interna">Fragmentación Interna</a></li>
+<li><a href="gestion-memoria.html#fragmentaci%C3%B3n-externa">Fragmentación Externa</a></li>
+<li><a href="gestion-memoria.html#algoritmos-de-colocaci%C3%B3n">Algoritmos de Colocación</a></li>
+</ul>
+</li>
+<li><a href="gestion-memoria.html#protecci%C3%B3n">Protección</a></li>
+<li><a href="gestion-memoria.html#compartici%C3%B3n">Compartición</a></li>
+<li><a href="gestion-memoria.html#organizaci%C3%B3n-l%C3%B3gica">Organización Lógica</a></li>
+<li><a href="gestion-memoria.html#organizaci%C3%B3n-f%C3%ADsica">Organización Física</a></li>
 </ul>
 <h1 id="ideas-previas"><a class="header" href="#ideas-previas">Ideas Previas</a></h1>
 <h2 id="multiprogramación"><a class="header" href="#multiprogramación">Multiprogramación</a></h2>
@@ -213,11 +228,59 @@
 <p>El término multiusuario se refiere a la característica de ciertos sistemas operativos o programas que permiten <strong>proveer servicio y procesamiento a múltiples usuarios</strong> simultáneamente. Esto significa que varios usuarios pueden utilizar el mismo equipo al mismo tiempo, gracias a la capacidad de los sistemas operativos para separar los recursos del sistema.</p>
 <!-- #Solucion cual es la diferencia entre multiprocesamiento y multiprogramación -->
 <!-- #Solucion entoces? la multiprogramación no significa que varios programas se ejecuten simultáneamente en la CPU. En cambio, lo que sucede es que la CPU cambia rápidamente entre los programas, ejecutando una parte de cada uno de ellos a la vez. R: SI-->
-<h1 id="análisis-de-rendimiento-de-un-sistema-de-multiprogramación"><a class="header" href="#análisis-de-rendimiento-de-un-sistema-de-multiprogramación">Análisis de Rendimiento de un Sistema de Multiprogramación</a></h1>
-<!-- #GoarMeddles41 -->
-<h1 id="términos-de-administración-de-memoria"><a class="header" href="#términos-de-administración-de-memoria">Términos de Administración de Memoria</a></h1>
-<!-- #pendiente pag 7 pdf gestion de memoria -->
-<!-- #LaymanHeads29 -->
+<!-- #HuntleyOpened124 -->
+<h2 id="memoria-virtual"><a class="header" href="#memoria-virtual">Memoria Virtual</a></h2>
+<p>Cada proceso dispone de un espacio de memoria virtual propio donde puede almacenar sus datos.</p>
+<h2 id="memoria-real"><a class="header" href="#memoria-real">Memoria Real</a></h2>
+<p>Es el espacio físico en memoria RAM donde se almacenan los datos de todos los procesos.</p>
+<h2 id="page-página"><a class="header" href="#page-página">Page (Página)</a></h2>
+<p>Es un bloque de <strong>memoria virtual</strong> de tamaño fijo.</p>
+<h2 id="frame-marco"><a class="header" href="#frame-marco">Frame (Marco)</a></h2>
+<p>Es un bloque de <strong>memoria real</strong> de igual tamaño al de una pagina (page).</p>
+<h1 id="mmu"><a class="header" href="#mmu">MMU</a></h1>
+<blockquote>
+<p>Memory Management Unit</p>
+</blockquote>
+<p>Traduce la dirección lógica de una memoria virtual a una dirección real en memoria real, permitiendo que cada programa tenga su propio espacio en memoria independiente a la memoria real.</p>
+<p><img src="./images/LemalRelax32.png" alt="" /> </p>
+<blockquote>
+<p>La MMU utiliza una estructura de datos llamada <strong>tabla de páginas</strong> donde se almacena la correspondencia entre la ubicación de un marco con una página.</p>
+</blockquote>
+<h1 id="requisitos-para-gestionar-la-memoria"><a class="header" href="#requisitos-para-gestionar-la-memoria">Requisitos para Gestionar la Memoria</a></h1>
+<ul>
+<li>Reubicación.</li>
+<li>Protección.</li>
+<li>Compartición.</li>
+<li>Organización lógica.</li>
+<li>Organización física.</li>
+</ul>
+<h1 id="intercambio-de-páginas-reubicación"><a class="header" href="#intercambio-de-páginas-reubicación">Intercambio de Páginas (Reubicación)</a></h1>
+<blockquote>
+<p>Capacidad de intercambio.</p>
+</blockquote>
+<p>Se usa cuando hay escasez de memoria principal (RAM). Se mueven temporalmente paginas de la RAM al almacenamiento secundario (disco duro).</p>
+<p>Un ejemplo es cuando un programa necesita acceder a una pagina que no está en memoria principal (Si se ha cambiado al almacenamiento secundario para liberar memoria), se produce un <strong>fallo de pagina</strong>, entonces el S.O hace un <strong>intercambio de pagina</strong> para cargar la memoria requerida en memoria física, actualizando la <strong>tabla de paginas</strong> para reflejar la nueva ubicación.</p>
+<h2 id="fragmentación-interna"><a class="header" href="#fragmentación-interna">Fragmentación Interna</a></h2>
+<blockquote>
+<p>Se asigna mas memoria de la necesaria a un proceso.</p>
+</blockquote>
+<h2 id="fragmentación-externa"><a class="header" href="#fragmentación-externa">Fragmentación Externa</a></h2>
+<blockquote>
+<p>La memoria se divide en bloques de tamaño variable y se generan espacios no utilizados entre bloques de memoria adyacente.</p>
+</blockquote>
+<h2 id="algoritmos-de-colocación"><a class="header" href="#algoritmos-de-colocación">Algoritmos de Colocación</a></h2>
+<ul>
+<li>Bost Fit.</li>
+<li>First Fit.</li>
+<li>Next Fit.</li>
+</ul>
+<h1 id="protección"><a class="header" href="#protección">Protección</a></h1>
+<blockquote>
+<p>Los procesos solo pueden acceder a los datos autorizados.</p>
+</blockquote>
+<h1 id="compartición"><a class="header" href="#compartición">Compartición</a></h1>
+<h1 id="organización-lógica"><a class="header" href="#organización-lógica">Organización Lógica</a></h1>
+<h1 id="organización-física"><a class="header" href="#organización-física">Organización Física</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="t-gestión-de-memoria"><a class="header" href="#t-gestión-de-memoria">T: Gestión de Memoria</a></h1>
 <p>Realizar la tabla de procesos y el diagrama de tiempos de los 4 procesos con 90% de I/O.</p>
 <div class="table-wrapper"><table><thead><tr><th>Job</th><th>Tiempo de llegada</th><th>Minutos necesarios CPU</th></tr></thead><tbody>
