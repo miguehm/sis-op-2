@@ -34,16 +34,70 @@ El término multiusuario se refiere a la característica de ciertos sistemas ope
 
 <!-- #Solucion entoces? la multiprogramación no significa que varios programas se ejecuten simultáneamente en la CPU. En cambio, lo que sucede es que la CPU cambia rápidamente entre los programas, ejecutando una parte de cada uno de ellos a la vez. R: SI-->
 
-# Análisis de Rendimiento de un Sistema de Multiprogramación
+<!-- #HuntleyOpened124 -->
 
-<!-- #GoarMeddles41 -->
+## Memoria Virtual
 
-# Términos de Administración de Memoria
+Cada proceso dispone de un espacio de memoria virtual propio donde puede almacenar sus datos.
 
-<!-- #pendiente pag 7 pdf gestion de memoria -->
+## Memoria Real
 
-<!-- #LaymanHeads29 -->
+Es el espacio físico en memoria RAM donde se almacenan los datos de todos los procesos.
 
-# Requisitos para la Gestión de memoria
+## Page (Página)
 
+Es un bloque de **memoria virtual** de tamaño fijo.
 
+## Frame (Marco)
+
+Es un bloque de **memoria real** de igual tamaño al de una pagina (page).
+
+# MMU
+
+> Memory Management Unit
+
+Traduce la dirección lógica de una memoria virtual a una dirección real en memoria real, permitiendo que cada programa tenga su propio espacio en memoria independiente a la memoria real.
+
+![](./images/LemalRelax32.png) 
+
+> La MMU utiliza una estructura de datos llamada **tabla de páginas** donde se almacena la correspondencia entre la ubicación de un marco con una página.
+
+# Requisitos para Gestionar la Memoria
+
+- Reubicación.
+- Protección.
+- Compartición.
+- Organización lógica.
+- Organización física.
+
+# Intercambio de Páginas (Reubicación)
+
+> Capacidad de intercambio.
+
+Se usa cuando hay escasez de memoria principal (RAM). Se mueven temporalmente paginas de la RAM al almacenamiento secundario (disco duro).
+
+Un ejemplo es cuando un programa necesita acceder a una pagina que no está en memoria principal (Si se ha cambiado al almacenamiento secundario para liberar memoria), se produce un **fallo de pagina**, entonces el S.O hace un **intercambio de pagina** para cargar la memoria requerida en memoria física, actualizando la **tabla de paginas** para reflejar la nueva ubicación.
+
+## Fragmentación Interna
+
+> Se asigna mas memoria de la necesaria a un proceso.
+
+## Fragmentación Externa
+
+> La memoria se divide en bloques de tamaño variable y se generan espacios no utilizados entre bloques de memoria adyacente.
+
+## Algoritmos de Colocación
+
+- Bost Fit.
+- First Fit.
+- Next Fit.
+
+# Protección
+
+> Los procesos solo pueden acceder a los datos autorizados.
+
+# Compartición
+
+# Organización Lógica
+
+# Organización Física
