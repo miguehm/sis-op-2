@@ -1,5 +1,7 @@
 # Gestión de memoria
 
+La gestión de memoria en sistemas operativos se refiere al **conjunto de técnicas y algoritmos** utilizados para **administrar y controlar** el uso de la memoria en un sistema informático. Esto incluye **asignar y liberar** memoria para los programas y procesos en ejecución, así como garantizar la **protección y el acceso eficiente** a la memoria por parte de los diferentes componentes del sistema operativo y las aplicaciones.
+
 <!-- toc -->
 
 # Ideas Previas
