@@ -98,8 +98,6 @@ Ventajas: Mas eficiente en espacio de memoria.
 
 Desventajas: Mas lento.
 
-![](./images/LaymanFlaps33-1.png) 
-
 ### First-fit.
 
 Escanea la memoria desde el comienzo y elige el primer bloque disponible que sea lo suficientemente grande.
@@ -107,8 +105,6 @@ Escanea la memoria desde el comienzo y elige el primer bloque disponible que sea
 Ventaja: Un poco mas rápido que best-fit.
 
 Desventaja: Puede desperdiciar mucha memoria si el espacia asignado es mas grande en comparación con la memoria alojada.
-
-![](./images/LaymanFlaps33-2.png) 
 
 ### Next-fit.
 
@@ -118,7 +114,7 @@ Ventajas: Mas rápido que best-fit y First-fit
 
 Desventajas: Desperdiciará los bloques de memoria que se encuentren antes del último bloque de memoria alojado.
 
-![](./images/LaymanFlaps33-3.png) 
+![](./images/LaymanFlaps33.png) 
 
 # Protección
 

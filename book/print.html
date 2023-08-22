@@ -182,6 +182,7 @@
 </div>
 <p>Entrega de 9 - 12 actividades</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="gestión-de-memoria"><a class="header" href="#gestión-de-memoria">Gestión de memoria</a></h1>
+<p>La gestión de memoria en sistemas operativos se refiere al <strong>conjunto de técnicas y algoritmos</strong> utilizados para <strong>administrar y controlar</strong> el uso de la memoria en un sistema informático. Esto incluye <strong>asignar y liberar</strong> memoria para los programas y procesos en ejecución, así como garantizar la <strong>protección y el acceso eficiente</strong> a la memoria por parte de los diferentes componentes del sistema operativo y las aplicaciones.</p>
 <ul>
 <li><a href="gestion-memoria.html#ideas-previas">Ideas Previas</a>
 <ul>
@@ -200,7 +201,13 @@
 <ul>
 <li><a href="gestion-memoria.html#fragmentaci%C3%B3n-interna">Fragmentación Interna</a></li>
 <li><a href="gestion-memoria.html#fragmentaci%C3%B3n-externa">Fragmentación Externa</a></li>
-<li><a href="gestion-memoria.html#algoritmos-de-colocaci%C3%B3n">Algoritmos de Colocación</a></li>
+<li><a href="gestion-memoria.html#algoritmos-de-colocaci%C3%B3n">Algoritmos de Colocación</a>
+<ul>
+<li><a href="gestion-memoria.html#best-fit">Best-fit.</a></li>
+<li><a href="gestion-memoria.html#first-fit">First-fit.</a></li>
+<li><a href="gestion-memoria.html#next-fit">Next-fit.</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="gestion-memoria.html#protecci%C3%B3n">Protección</a></li>
@@ -269,11 +276,19 @@
 <p>La memoria se divide en bloques de tamaño variable y se generan espacios no utilizados entre bloques de memoria adyacente.</p>
 </blockquote>
 <h2 id="algoritmos-de-colocación"><a class="header" href="#algoritmos-de-colocación">Algoritmos de Colocación</a></h2>
-<ul>
-<li>Bost Fit.</li>
-<li>First Fit.</li>
-<li>Next Fit.</li>
-</ul>
+<h3 id="best-fit"><a class="header" href="#best-fit">Best-fit.</a></h3>
+<p>Elije el bloque mas cercano en tamaño al bloque de memoria requerido</p>
+<p>Ventajas: Mas eficiente en espacio de memoria.</p>
+<p>Desventajas: Mas lento.</p>
+<h3 id="first-fit"><a class="header" href="#first-fit">First-fit.</a></h3>
+<p>Escanea la memoria desde el comienzo y elige el primer bloque disponible que sea lo suficientemente grande.</p>
+<p>Ventaja: Un poco mas rápido que best-fit.</p>
+<p>Desventaja: Puede desperdiciar mucha memoria si el espacia asignado es mas grande en comparación con la memoria alojada.</p>
+<h3 id="next-fit"><a class="header" href="#next-fit">Next-fit.</a></h3>
+<p>Comienza a escanear la memoria desde la localización del último bloque de memoria alojado y elige el siguiente bloque disponible lo suficientemente grande.</p>
+<p>Ventajas: Mas rápido que best-fit y First-fit</p>
+<p>Desventajas: Desperdiciará los bloques de memoria que se encuentren antes del último bloque de memoria alojado.</p>
+<p><img src="./images/LaymanFlaps33.png" alt="" /> </p>
 <h1 id="protección"><a class="header" href="#protección">Protección</a></h1>
 <blockquote>
 <p>Los procesos solo pueden acceder a los datos autorizados.</p>
