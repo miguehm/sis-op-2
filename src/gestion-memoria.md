@@ -90,9 +90,35 @@ Un ejemplo es cuando un programa necesita acceder a una pagina que no está en m
 
 ## Algoritmos de Colocación
 
-- Bost Fit.
-- First Fit.
-- Next Fit.
+### Best-fit.
+
+Elije el bloque mas cercano en tamaño al bloque de memoria requerido
+
+Ventajas: Mas eficiente en espacio de memoria.
+
+Desventajas: Mas lento.
+
+![](./images/LaymanFlaps33-1.png) 
+
+### First-fit.
+
+Escanea la memoria desde el comienzo y elige el primer bloque disponible que sea lo suficientemente grande.
+
+Ventaja: Un poco mas rápido que best-fit.
+
+Desventaja: Puede desperdiciar mucha memoria si el espacia asignado es mas grande en comparación con la memoria alojada.
+
+![](./images/LaymanFlaps33-2.png) 
+
+### Next-fit.
+
+Comienza a escanear la memoria desde la localización del último bloque de memoria alojado y elige el siguiente bloque disponible lo suficientemente grande.
+
+Ventajas: Mas rápido que best-fit y First-fit
+
+Desventajas: Desperdiciará los bloques de memoria que se encuentren antes del último bloque de memoria alojado.
+
+![](./images/LaymanFlaps33-3.png) 
 
 # Protección
 
