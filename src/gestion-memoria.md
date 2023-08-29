@@ -54,6 +54,10 @@ Es un bloque de **memoria virtual** de tamaño fijo.
 
 Es un bloque de **memoria real** de igual tamaño al de una pagina (page).
 
+## Segmento
+
+Similar a una página, pedo de **tamaño variable**.
+
 # MMU
 
 > Memory Management Unit
@@ -88,9 +92,9 @@ Un ejemplo es cuando un programa necesita acceder a una pagina que no está en m
 
 > La memoria se divide en bloques de tamaño variable y se generan espacios no utilizados entre bloques de memoria adyacente.
 
-## Algoritmos de Colocación
+# Algoritmo de Colocación Best-fit, First-fit y Next-fit
 
-### Best-fit.
+## Best-fit.
 
 Elije el bloque mas cercano en tamaño al bloque de memoria requerido
 
@@ -98,7 +102,7 @@ Ventajas: Mas eficiente en espacio de memoria.
 
 Desventajas: Mas lento.
 
-### First-fit.
+## First-fit.
 
 Escanea la memoria desde el comienzo y elige el primer bloque disponible que sea lo suficientemente grande.
 
@@ -106,7 +110,7 @@ Ventaja: Un poco mas rápido que best-fit.
 
 Desventaja: Puede desperdiciar mucha memoria si el espacia asignado es mas grande en comparación con la memoria alojada.
 
-### Next-fit.
+## Next-fit. 
 
 Comienza a escanear la memoria desde la localización del último bloque de memoria alojado y elige el siguiente bloque disponible lo suficientemente grande.
 
@@ -115,6 +119,55 @@ Ventajas: Mas rápido que best-fit y First-fit
 Desventajas: Desperdiciará los bloques de memoria que se encuentren antes del último bloque de memoria alojado.
 
 ![](./images/LaymanFlaps33.png) 
+
+## Algoritmo de Segunda Oportunidad
+
+## Algoritmo LRU (Least Recently Used)
+
+<!-- #JezLicenses78 -->
+
+Algoritmo para decidir que paginas pueden ser retiradas de la memoria cuando se necesita cargar una nueva y no hay marcos disponibles, manteniendo en memoria las paginas que se han usado mas recientemente, estimando que páginas tienen mayor probabilidad de ser usadas en el futuro.
+
+### Implementación Lista Ligada
+
+1. Cada que se hace referencia a un dato (o página) se busca en la lista enlazada.
+2. Si el dato ya está en la lista, se elimina de su ubicación actual y se agrega al principio de la lista.
+
+![](./images/JezLicenses78-1.png) 
+
+3. Si el dato o segmento no está en la lista y la lista alcanzó su número máximo, se elimina el último elemento y se agrega el nuevo al principio de la lista.
+
+![](./images/JezLicenses78-2.png) 
+
+4. Si el dato no está en la lista y aun no se ha alcanzado su tamaño máximo, se agrega el nuevo dato al principio de la lista.
+
+![](./images/JezLicenses78-3.png) 
+
+### Implementación con Contador
+
+Se requiere un contador que incremente con cada instrucción del CPU, cada que una página es referenciada, se le asigna un número actual de contador.
+
+Cuando se necesita retirar una página de memoria, se busca la página con el número mas pequeño (la mas antigua).
+
+![](./images/JezLicenses78-4.png) 
+
+## Algoritmo Working Set (Conjunto de trabajo)
+
+> Algoritmo de reemplazo de páginas
+
+### Ejemplo
+
+Sistema con 4 marcos de página y un conjunto de trabajo de $\tau = 4$.
+
+Secuencia: 1, 2, 3, 4, 1, 2, 5.
+
+1. En los primeros 4 instantes de tiempo, se asignan 4 paginas a 4 marcos de página.
+
+2. Se vuelven a referenciar las paginas 1 y 2, es hasta que se llega a la página 5 que se produce un fallo de página, en los últimos 4 instantes de tiempo solo se ha referenciado a las páginas 4, 1, 2, y 5, la única no referenciada es la 3, entonces se intercambia la pagina 3 con la pagina 5.
+
+![](./images/JezLicenses78-5.png) 
+
+<!-- #pendiente todo lo de abajo -->
 
 # Protección
 
